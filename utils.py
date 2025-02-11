@@ -1,6 +1,7 @@
 import json  
 import os    
 
+# Lê o arquivo json e retorna os dados:
 def load_data(filename_data):
     # Monta o caminho para o arquivo JSON:
     file_path = os.path.join("static", "data", filename_data)
@@ -13,6 +14,7 @@ def load_data(filename_data):
     # Retorna a estrutura de dados carregada:
     return data                                                 
 
+# Lê o arquivo HTML e retorna a string:
 def load_template(filename_template):
     # Monta o caminho para o arquivo HTML:
     file_path = os.path.join("static", "templates", filename_template)  
@@ -22,6 +24,7 @@ def load_template(filename_template):
         # Retorna o conteúdo do arquivo como string:
         return file.read()                                      
 
+# Adiciona a anotação ao arquivo json:
 def add_note(titulo, detalhes):
     # Monta o caminho para o notes.json:                                           
     file_path = os.path.join("static", "data", "notes.json")    

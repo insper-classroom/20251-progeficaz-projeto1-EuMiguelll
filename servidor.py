@@ -7,11 +7,13 @@ app = Flask(__name__)
 # Define a pasta de arquivos estáticos:
 app.static_folder = 'static'                                   
 
+#Rota da pagina principal:
 @app.route('/')
 def index():
     # Renderiza a string HTML gerada pela função index():
     return render_template_string(views.index())
 
+# Define a rota quando postar o formulario:
 @app.route('/submit', methods=['POST'])
 def submit_form():
     # Lê o valor do campo 'titulo' e 'detalhes' do formulário:
