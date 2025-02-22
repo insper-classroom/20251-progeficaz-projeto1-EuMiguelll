@@ -24,3 +24,4 @@ def submit(titulo, detalhes):
     
     # Adiciona a nova anotação ao arquivo JSON:
     add_note(titulo, detalhes)                                    
+
